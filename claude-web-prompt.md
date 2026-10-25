@@ -1,8 +1,25 @@
 # For Claude on the web (claude.ai/code)
 
-Paste this at the start of a Claude Code web session (or save it as the
-session's instructions). It teaches web Claude how to hand work to Goku
-through this repo — the same way desktop Claude Code does.
+**You usually don't need this file anymore.** The same instructions now
+live in `CLAUDE.md` at the repo root, which Claude Code reads automatically
+at the start of every session connected to this repo.
+
+Use this file only for sessions on *other* repos, where the handoff
+repo's CLAUDE.md isn't loaded. Paste the short pointer below once at the
+start of such a session:
+
+> To delegate to Goku (the user's Muse agent): write a task file in the
+> private repo mukhbit0/muse-handoff at
+> `tasks/inbox/YYYYMMDD-HHMMSS-<short-slug>.md` (Asia/Karachi time), with
+> frontmatter `id / from: claude-code / created / priority / repo` and
+> sections `Task / Context / Done when / Limits`. Full format:
+> mukhbit0/muse-handoff/CLAUDE.md. Commit and push. Goku picks it up
+> within about a minute and reports back in the main chat; results land
+> in `tasks/done/`. Never ask him to publish, send, spend, or delete
+> anything by himself.
+
+Full prompt (only if the short pointer isn't enough — e.g. a fresh
+session that has never seen the handoff format):
 
 ---
 

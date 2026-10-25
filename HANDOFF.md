@@ -76,9 +76,10 @@ in chat: "write a task for Goku in muse-handoff about …".
 ## Claude on the web
 
 - **Claude Code on the web (claude.ai/code):** connect this repo to the
-  session, then paste `claude-web-prompt.md` at the start of the session
-  (or save it as the session's instructions). Delegation then works the
-  same as desktop Claude Code.
+  session. The instructions now live in `CLAUDE.md` at the repo root,
+  which Claude Code reads automatically at the start of every session on
+  this repo — no pasting needed. In sessions on *other* repos, paste the
+  short pointer from `claude-web-prompt.md` once.
 - **Plain claude.ai chat:** its GitHub integration is read-only — it can
   read the repo and draft a task file, but it cannot push one. Either use
   Claude Code on the web, or paste the drafted file into the repo
