@@ -72,3 +72,14 @@ xcopy skills\delegate-to-goku %USERPROFILE%\.claude\skills\delegate-to-goku\ /E 
 Then tell Claude Code: "delegate to Goku" — the skill in
 `skills/delegate-to-goku/SKILL.md` teaches it the format above. Or just say
 in chat: "write a task for Goku in muse-handoff about …".
+
+## Claude on the web
+
+- **Claude Code on the web (claude.ai/code):** connect this repo to the
+  session, then paste `claude-web-prompt.md` at the start of the session
+  (or save it as the session's instructions). Delegation then works the
+  same as desktop Claude Code.
+- **Plain claude.ai chat:** its GitHub integration is read-only — it can
+  read the repo and draft a task file, but it cannot push one. Either use
+  Claude Code on the web, or paste the drafted file into the repo
+  yourself on github.com (Add file → commit). Goku picks it up the same way.
