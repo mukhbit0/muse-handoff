@@ -6,8 +6,8 @@ description: Hand a task to Goku, the user's Muse agent, through the shared muse
 # Delegate to Goku
 
 Goku is the user's Muse agent. He lives on his own machine, has his own
-memory, files, and connected accounts, and watches the private repo
-`mukhbit0/muse-handoff` for new tasks about every 15 minutes.
+memory, files, and connected accounts, and usually notices a new task
+within about a minute of it landing in the handoff repo.
 
 ## When to use this
 
@@ -39,6 +39,6 @@ will report back in the main chat.
 - One task per file. Be specific — vague tasks come back as questions.
 - Never ask Goku to publish, post, send email, spend money, or delete
   things by himself. He prepares that work and asks the user first.
-- If the user wants a reply from Goku sooner than ~15 minutes, say so:
-  he can ask Goku directly in chat to check the inbox now.
+- If the user wants a reply from Goku sooner than a couple of minutes,
+  say so: he can ask Goku directly in chat to check the inbox now.
 - Check `tasks/done/` for results when the user asks what Goku finished.

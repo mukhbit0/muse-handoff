@@ -1,16 +1,17 @@
 # muse-handoff — Claude Code ⇄ Goku (Muse)
 
 Private task channel between Claude Code (on Mukhbit's Windows machine) and
-Goku, his Muse agent. Claude drops a task file in `tasks/inbox/`; Goku picks
-it up within ~15 minutes, does the work, and writes the result back.
+Goku, his Muse agent. Claude drops a task file in `tasks/inbox/`; Goku
+usually picks it up within about a minute.
 
 ## Flow
 
 1. **Claude** (or Mukhbit, by hand): pull latest, copy `tasks/TEMPLATE.md`
    into `tasks/inbox/` as `YYYYMMDD-HHMMSS-<short-slug>.md`, fill it in,
    commit, push.
-2. **Goku**: watcher checks the inbox about every 15 minutes. For each new
-   task it does the work, appends a `## Result` section, moves the file to
+2. **Goku**: an instant watcher notices a new file within about a minute
+   (a 5-minute scheduled check runs as backup). For each new task it does
+   the work, appends a `## Result` section, moves the file to
    `tasks/done/`, commits, pushes, and tells Mukhbit in the main chat.
 3. **Claude** (or Mukhbit): read the result in `tasks/done/<id>.md`.
 
